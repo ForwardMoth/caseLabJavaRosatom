@@ -12,7 +12,11 @@ public class Main {
 
         System.out.println("Скалярное произведение: " + vector1.getScalarMultiplication(vector2));
         System.out.println("Векторное произведение: " + vector1.getVectorMultiplication(vector2));
-        System.out.println("Косинус угла между векторами: " + vector1.getCornerCos(vector2));
+        try {
+            System.out.println("Косинус угла между векторами: " + vector1.getCornerCos(vector2));
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         System.out.println("Сумма векторов: " + vector1.sumVectors(vector2));
         System.out.println("Разность векторов: " + vector1.subtractionVectors(vector2));
     }
