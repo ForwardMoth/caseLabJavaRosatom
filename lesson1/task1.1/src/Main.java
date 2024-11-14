@@ -13,12 +13,12 @@ public class Main {
         System.out.println("Введите границы случайного числа");
         int leftBound = scanner.nextInt(), rightBound = scanner.nextInt();
 
-        ArrayMethods[] arrays = new ArrayMethods[]{
+        NumberArray[] arrays = new NumberArray[]{
                 new DoubleArray(n, leftBound, rightBound),
                 new IntArray(n, leftBound, rightBound)
         };
 
-        for (ArrayMethods array : arrays) {
+        for (NumberArray array : arrays) {
             array.printArray();
             array.getMin();
             array.getMax();

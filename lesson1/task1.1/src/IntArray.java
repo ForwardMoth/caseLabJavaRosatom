@@ -1,12 +1,11 @@
 import java.util.Arrays;
 
-public class IntArray implements ArrayMethods {
-    private final int size;
+public class IntArray extends NumberArray {
 
     private int[] array;
 
     IntArray(int size, int left, int right) {
-        this.size = size;
+        super(size);
         fillArray(left, right);
     }
 
@@ -56,8 +55,7 @@ public class IntArray implements ArrayMethods {
         printArray();
     }
 
-    @Override
-    public void fillArray(int left, int right) {
+    private void fillArray(int left, int right) {
         array = new int[size];
         for (int i = 0; i < size; i++) {
             array[i] = left + (int) (Math.random() * (right - left + 1));
