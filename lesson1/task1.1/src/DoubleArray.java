@@ -1,16 +1,15 @@
 import java.util.Arrays;
 
-public class DoubleArray implements ArrayMethods {
-    private final int size;
+public class DoubleArray extends NumberArray {
+
     private double[] array;
 
     DoubleArray(int size, int left, int right) {
-        this.size = size;
+        super(size);
         fillArray(left, right);
     }
 
-    @Override
-    public void fillArray(int left, int right) {
+    private void fillArray(int left, int right) {
         array = new double[size];
         for (int i = 0; i < size; i++) {
             array[i] = left + (Math.random() * (right - left + 1));
