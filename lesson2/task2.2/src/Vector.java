@@ -40,8 +40,12 @@ public class Vector {
         return new Vector(newX, newY, newZ);
     }
 
-    public double getCornerCos(Vector vector) {
-        return getScalarMultiplication(vector) / (getLength() * vector.getLength());
+    public double getCornerCos(Vector vector) throws Exception{
+        try {
+            return getScalarMultiplication(vector) / (getLength() * vector.getLength());
+        } catch (Exception e) {
+            throw new Exception("Ошибка - деление на 0");
+        }
     }
 
     public double getScalarMultiplication(Vector vector) {
